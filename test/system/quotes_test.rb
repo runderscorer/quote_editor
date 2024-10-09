@@ -9,11 +9,11 @@ class QuotesTest < ApplicationSystemTestCase
     visit quotes_path
     assert_selector 'h1', text: 'Quotes'
 
-    click_on 'New Quote'
-    assert_selector 'h1', text: 'New Quote'
+    click_on 'New quote'
+    assert_selector 'h1', text: 'New quote'
 
     fill_in 'Name', with: 'Albert Einstein'
-    click_on 'Create Quote'
+    click_on 'Create quote'
 
     assert_selector 'h1', text: 'Quotes'
     assert_text 'Albert Einstein'
@@ -31,10 +31,10 @@ class QuotesTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Quotes'
 
     click_on 'Edit', match: :first
-    assert_selector 'h1', text: 'Edit Quote'
+    assert_selector 'h1', text: 'Edit quote'
 
     fill_in 'Name', with: 'Alfred Winestain'
-    click_on 'Update Quote'
+    click_on 'Update quote'
 
     assert_selector 'h1', text: 'Quotes'
     assert_text 'Alfred Winestain'
