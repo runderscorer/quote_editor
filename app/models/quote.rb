@@ -1,6 +1,8 @@
 class Quote < ApplicationRecord
   validates :name, presence: true
 
+  belongs_to :company
+
   after_create_commit -> { broadcast_prepend_to 'quotes', partial: 'quotes/quote', locals: { quote: self }, target: 'quotes' }
   # This can be moved into a background job by using broadcast_prepend_later_to
   #

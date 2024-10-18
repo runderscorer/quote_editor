@@ -1,8 +1,11 @@
 first:
+  company: kpmg
   name: 'Quote 1'
 
 second:
+  company: kpmg
   name: 'Quote 2'
 
 third:
+  company: kpmg
   name: 'Quote 3'
